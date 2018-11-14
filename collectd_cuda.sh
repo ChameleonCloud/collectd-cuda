@@ -10,7 +10,7 @@ HOSTNAME="${COLLECTD_HOSTNAME:-$(hostname --fqdn)}"
 INTERVAL="${COLLECTD_INTERVAL:-10}"         
 
 # Reading the config file.
-config_file="plugins_config.sh"
+config_file=$(dirname "$0")/plugins_config.sh
 if [[ ! -f "$config_file" ]]
 then
 	echo "Missing config file!"
